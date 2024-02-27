@@ -38,7 +38,7 @@ public class StudentServiceImpl implements StudentService {
 
 
     public List<Student> fetchStudent(Pageable pageable) {
-        return studentRepository.findStudents(pageable);
+        return studentRepository.findAll(pageable).stream().toList();
     }
 
     @Override
